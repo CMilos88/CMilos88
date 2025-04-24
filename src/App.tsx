@@ -1,12 +1,14 @@
 import { useState } from 'react'
+import { Box } from '@mui/material';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import  Hello  from './components/Hello.tsx' 
+import Hello from './components/Hello.tsx'
+import { TemporaryDrawer } from './components/Drawer';
 
 function App() {
   const [count, setCount] = useState(0)
- 
+
   return (
     <>
       <div>
@@ -22,7 +24,10 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <Hello name="Milos"/>
+        <Hello name="Milos" />
+        <Box sx={{padding:'12px'}}>
+          <TemporaryDrawer />
+        </Box>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

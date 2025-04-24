@@ -59,6 +59,7 @@ module.exports = function (config) {
     },
     reporters: ['progress'],
     browsers: ['Chrome'],
-    singleRun: true
+    singleRun: false,
+    autoWatch: true
   });
 };
